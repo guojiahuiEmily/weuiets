@@ -50,6 +50,8 @@
         },
         "pages": [
           "pages/HomePage",
+          "pages/Slider",
+          "pages/Button",
           "pages/ShoppingCartPage",
           "pages/ShoppingDetail",
           "pages/MyPage"

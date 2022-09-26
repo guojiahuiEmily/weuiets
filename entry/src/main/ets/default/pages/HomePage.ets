@@ -2,6 +2,7 @@ import {GoodsData} from '../model/GoodsData'
 import {initializeOnStartup,getIconPath,getIconPathSelect} from '../model/GoodsDataModels'
 import {ShoppingCart} from './ShoppingCartPage'
 import {MyInfo} from './MyPage'
+import router from '@system.router'
 
 @Entry
 @Component
@@ -119,7 +120,19 @@ struct FormArk {
           ListItem() {
             Text("按钮").fontSize(17)
           }
+          .onClick(() => {
+            router.push({ uri: 'pages/Slider' })
+          })
           .width('100%').height(56).backgroundColor(0xFFFFFF)
+
+        ListItem() {
+          Text("滑杆").fontSize(17)
+        }
+        .onClick(() => {
+          router.push({ uri: 'pages/Slider' })
+        })
+        .width('100%').height(56).backgroundColor(0xFFFFFF)
+
 
           ListItem() {
             Text("空白填充").fontSize(17)
