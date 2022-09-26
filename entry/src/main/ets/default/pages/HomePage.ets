@@ -1,7 +1,7 @@
 import {GoodsData} from '../model/GoodsData'
 import {initializeOnStartup,getIconPath,getIconPathSelect} from '../model/GoodsDataModels'
-import {ShoppingCart} from './ShoppingCartPage.ets'
-import {MyInfo} from './MyPage.ets'
+import {ShoppingCart} from './ShoppingCartPage'
+import {MyInfo} from './MyPage'
 
 @Entry
 @Component
@@ -22,6 +22,8 @@ struct Index {
               MyInfo()
             }
           }
+          .backgroundColor('#ececec')
+//          .height('100%')
           .height(630)
         }
         .flexGrow(1)
@@ -107,6 +109,32 @@ struct GoodsList {
 }
 
 
+@Component
+struct FormArk {
+  private goodsItems: GoodsData[]
+
+  build() {
+    Column() {
+      List({ space: 2, initialIndex: 0 }) {
+          ListItem() {
+            Text("按钮").fontSize(17)
+          }
+          .width('100%').height(56).backgroundColor(0xFFFFFF)
+
+          ListItem() {
+            Text("空白填充").fontSize(17)
+          }
+          .width('100%').height(56).backgroundColor(0xFFFFFF)
+
+      }
+
+      .height('100%')
+      .width('100%')
+      .align(Alignment.Top)
+      .borderColor(Color.Gray)
+    }
+  }
+}
 
 
 @Component
@@ -117,10 +145,10 @@ struct GoodsHome {
     Column() {
       Tabs() {
         TabContent() {
-          GoodsList({ goodsItems: this.goodsItems });
+          FormArk();
         }
-        .tabBar("Top Sellers")
-        .backgroundColor(Color.White)
+        .tabBar('表单')
+
         TabContent() {
           GoodsList({ goodsItems: this.goodsItems });
         }
@@ -138,10 +166,9 @@ struct GoodsHome {
         .backgroundColor(Color.White)
       }
       .barWidth(500)
-      .barHeight(25)
+      .barHeight(45)
       .scrollable(true)
       .barMode(BarMode.Scrollable)
-      .backgroundColor('#007DFF')
       .height(630)
 
     }
