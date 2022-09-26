@@ -1,0 +1,37 @@
+apply plugin: 'com.huawei.ohos.hap'
+apply plugin: 'com.huawei.ohos.decctest'
+//For instructions on signature configuration, see https://developer.harmonyos.com/cn/docs/documentation/doc-guides/ide_debug_device-0000001053822404#section1112183053510
+ohos {
+    signingConfigs {
+        debug {
+            storeFile file('/Users/fengguo/.ohos/config/auto_debug_com.huawei.cookbook_900086000023004558.p12')
+            storePassword '0000001B751FAF4429C2D73914A7D887356633C44A70FA62479B07EDC9130936A69DE0038242894D11AD4B'
+            keyAlias = 'debugKey'
+            keyPassword '0000001B9816DDF8068B36DCB0B687B67666AC9483601EEAEFBDAE1EA4509E91A9F8FD0A2A2C4648524D51'
+            signAlg = 'SHA256withECDSA'
+            profile file('/Users/fengguo/.ohos/config/auto_debug_com.huawei.cookbook_900086000023004558.p7b')
+            certpath file('/Users/fengguo/.ohos/config/auto_debug_com.huawei.cookbook_900086000023004558.cer')
+        }
+    }
+    compileSdkVersion 7
+    defaultConfig {
+        compatibleSdkVersion 7
+    }
+    buildTypes {
+        release {
+            proguardOpt {
+                proguardEnabled false
+                rulesFiles 'proguard-rules.pro'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.har'])
+    testImplementation 'junit:junit:4.13.1'
+    ohosTestImplementation 'com.huawei.ohos.testkit:runner:2.0.0.200'
+}
+decc {
+    supportType = ['html', 'xml']
+}
