@@ -20,7 +20,7 @@ struct ThirdPage {
   build() {
     Row() {
       Column() {
-        Image($r('app.media.picture1'))
+        Image($r('app.media.example'))
       }
       .width('100%')
     }

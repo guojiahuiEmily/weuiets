@@ -1,17 +1,26 @@
+// xxx.ets
 @Entry
 @Component
 struct PinchGestureExample {
-  @State message: string = 'Hello World'
+  @State scaleValue: number = 1
 
   build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-      }
-      .width('100%')
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.SpaceBetween }) {
+//      Text('PinchGesture scale:' + this.scale)
     }
-    .height('100%')
+    .height(100).width(200).padding(20).border({ width: 1 }).margin(80)
+    .scale({ x: this.scaleValue, y: this.scaleValue, z: this.scaleValue })
+    .gesture(
+    PinchGesture()
+      .onActionStart((event: GestureEvent) => {
+        console.info('Pinch start')
+      })
+      .onActionUpdate((event: GestureEvent) => {
+        this.scaleValue = event.scale
+      })
+      .onActionEnd(() => {
+        console.info('Pinch end')
+      })
+    )
   }
 }

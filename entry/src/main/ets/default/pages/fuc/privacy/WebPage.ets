@@ -18,7 +18,7 @@
 struct WebPage {
   build() {
     Column() {
-      Image($r('app.media.picture3'))
+      Image($r('app.media.example'))
     }.width('100%')
   }
 }

@@ -1,17 +1,26 @@
+// xxx.ets
 @Entry
 @Component
 struct RotationGestureExample {
-  @State message: string = 'Hello World'
+  @State angle: number = 0
 
   build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-      }
-      .width('100%')
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.SpaceBetween }) {
+      Text('RotationGesture angle:' + this.angle)
     }
-    .height('100%')
+    .height(100).width(200).padding(20).border({ width:1 })
+    .margin(80).rotate({ x:1, y:2, z:3, angle: this.angle })
+    .gesture(
+    RotationGesture()
+      .onActionStart((event: GestureEvent) => {
+        console.log('Rotation start')
+      })
+      .onActionUpdate((event: GestureEvent) => {
+        this.angle = event.angle
+      })
+      .onActionEnd(() => {
+        console.log('Rotation end')
+      })
+    )
   }
 }

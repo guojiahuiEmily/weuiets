@@ -98,17 +98,17 @@ struct ShopCartBottom {
          .fontSize(18)
           .margin({left:20})
           .width(150)
-      Text('Check Out')
-        .fontColor(Color.Black)
-        .fontSize(18)
-        .margin({right:20,left:100})
-        .onClick(()=>{
-        prompt.showToast({
-          message: 'Checking Out',
-          duration: 10,
-          bottom:100
-        })
-        })
+//      Text('Check Out')
+//        .fontColor(Color.Black)
+//        .fontSize(18)
+//        .margin({right:20,left:100})
+//        .onClick(()=>{
+//        prompt.showToast({
+//          message: 'Checking Out',
+//          duration: 10,
+//          bottom:100
+//        })
+//        })
     }
     .height(30)
     .width('100%')

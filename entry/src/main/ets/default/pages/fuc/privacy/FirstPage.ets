@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@ohos.router';
+import router from '@system.router';
 import app from '@system.app'
 import dataStorage from '@ohos.data.storage';
 import featureAbility from '@ohos.ability.featureAbility'
@@ -42,7 +42,7 @@ struct FirstPage {
   onConfirm() {
     this.saveIsPrivacy()
     this.timerId = setTimeout(function () {
-      router.replace({ url: 'pages/SecondPage' })
+      router.replace({ uri: 'pages/fuc/privacy/SecondPage' })
     }, 2000);
 
   }
@@ -66,7 +66,7 @@ struct FirstPage {
 
       if (!firstCome) {
         setTimeout(function () {
-          router.replace({ url: 'pages/SecondPage' })
+          router.replace({ uri: 'pages/fuc/privacy/SecondPage' })
         }, 2000);
       }
     })
@@ -92,7 +92,7 @@ struct FirstPage {
   build() {
     Row() {
       Column() {
-        Image($r("app.media.picture4"))
+        Image($r("app.media.example"))
       }
       .width('100%')
     }
@@ -123,7 +123,7 @@ struct CustomDialogExample {
       Text('隐私协议弹框隐私协议弹框隐私协议弹框隐私协议弹框隐私协议弹框隐私协议弹框隐私协议弹框').width('80%').fontSize(16)
 
       Text('隐私协议弹框').width('80%').fontSize(16).fontColor(Color.Blue).onClick(() => {
-        router.push({ url: 'pages/Privacy' })
+        router.push({ uri: 'pages/fuc/privacy/Privacy' })
       })
 
 

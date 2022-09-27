@@ -1,7 +1,7 @@
 {
   "app": {
     "vendor": "example",
-    "bundleName": "com.huawei.cookbook",
+    "bundleName": "com.myie9.weuiets",
     "version": {
       "code": 1000000,
       "name": "1.0.0"
@@ -77,7 +77,20 @@
           "pages/giftab/TransitionExample",
           "pages/giftab/SharedTransitionExampleA",
           "pages/giftab/SharedTransitionExampleB",
-          "pages/giftab/MotionPathExample"
+          "pages/giftab/MotionPathExample",
+          "pages/giftab/ShapeExample",
+          "pages/TextStyleExample",
+          "pages/giftab/ClipAndMaskExample",
+          "pages/fuc/privacy/FirstPage",
+          "pages/fuc/privacy/Privacy",
+          "pages/fuc/privacy/SecondPage",
+          "pages/fuc/privacy/ThirdPage",
+          "pages/fuc/privacy/WebPage",
+          "pages/gesturetab/LongPressGestureExample",
+          "pages/gesturetab/PanGestureExample",
+          "pages/gesturetab/PinchGestureExample",
+          "pages/gesturetab/RotationGestureExample",
+          "pages/gesturetab/GestureGroupExample"
         ],
         "name": "default",
         "window": {

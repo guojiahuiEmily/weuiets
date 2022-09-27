@@ -210,6 +210,74 @@ struct ContainerTab {
 
 
 @Component
+struct GestureTab {
+
+  build() {
+    Column() {
+      List({ space: 2, initialIndex: 0 }) {
+        ListItem() {
+          Button("长按", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/gesturetab/LongPressGestureExample' })
+            })
+        }
+
+        ListItem() {
+          Button("拖动", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/gesturetab/PanGestureExample' })
+            })
+        }
+
+
+        ListItem() {
+          Button("缩放", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/gesturetab/PinchGestureExample' })
+            })
+        }
+//
+//        ListItem() {
+//          Button("旋转", { type: ButtonType.Normal, stateEffect: false })
+//            .width('100%').height(56).backgroundColor(0xFFFFFF)
+//            .fontColor('rgb(0, 0, 0)')
+//            .onClick((event: ClickEvent) => {
+//              router.push({ uri: 'pages/gesturetab/RotationGestureExample' })
+//            })
+//        }
+//
+//
+//        ListItem() {
+//          Button("组合", { type: ButtonType.Normal, stateEffect: false })
+//            .width('100%').height(56).backgroundColor(0xFFFFFF)
+//            .fontColor('rgb(0, 0, 0)')
+//            .onClick((event: ClickEvent) => {
+//              router.push({ uri: 'pages/gesturetab/GestureGroupExample' })
+//            })
+//        }
+
+
+
+      }
+
+      .height('100%')
+      .width('100%')
+      .align(Alignment.Top)
+      .borderColor(Color.Gray)
+    }
+  }
+}
+
+
+
+
+@Component
 struct GifTab {
 
   build() {
@@ -266,6 +334,24 @@ struct GifTab {
             .fontColor('rgb(0, 0, 0)')
             .onClick((event: ClickEvent) => {
               router.push({ uri: 'pages/giftab/MotionPathExample' })
+            })
+        }
+
+        ListItem() {
+          Button("形状绘画", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/giftab/ShapeExample' })
+            })
+        }
+
+        ListItem() {
+          Button("图片裁剪", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/giftab/ClipAndMaskExample' })
             })
         }
 
@@ -360,6 +446,16 @@ struct FormArk {
             })
         }
 
+        ListItem() {
+          Button("文本样式", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/TextStyleExample' })
+            })
+        }
+
+
 
       }
 
@@ -395,12 +491,7 @@ struct GoodsHome {
         .tabBar("动画")
 
         TabContent() {
-          ContainerTab();
-        }
-        .tabBar("多媒体")
-
-        TabContent() {
-          ContainerTab();
+          GestureTab();
         }
         .tabBar("手势")
       }

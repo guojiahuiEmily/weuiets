@@ -1,3 +1,4 @@
+import prompt from '@system.prompt';
 // xxx.ets
 @Entry
 @Component
@@ -18,6 +19,16 @@ struct PopupExample {
   build() {
 
     Column({space:20}) {
+      Button("提示框", { type: ButtonType.Normal, stateEffect: true })
+        .backgroundColor(0x07c160)
+        .borderRadius(8).width(184).height(48).fontWeight(700)
+        .onClick((event: ClickEvent) => {
+          prompt.showToast({
+                      message: 'Checking Out',
+                      duration: 10,
+                      bottom:100
+                    })
+        })
 
       Button('one button dialog')
         .onClick(() => {

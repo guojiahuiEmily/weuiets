@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import router from '@ohos.router';
+import router from '@system.router';
 
 @Entry
 @Component
@@ -26,7 +26,7 @@ struct SecondPage {
     var that = this
     this.id = setTimeout(function () {
       if (!that.jumpFlag) {
-        router.replace({ url: 'pages/ThirdPage' })
+        router.replace({ uri: 'pages/fuc/privacy/ThirdPage' })
       }
     }, 3000);
   }
@@ -38,9 +38,9 @@ struct SecondPage {
   build() {
     Row() {
       Column() {
-        Image($r('app.media.picture2')).onClick(() => {
+        Image($r('app.media.example')).onClick(() => {
           this.jumpFlag = true
-          router.push({ url: 'pages/WebPage', params: { source: 'ad' } })
+          router.push({ uri: 'pages/fuc/privacy/WebPage', params: { source: 'ad' } })
         })
       }
       .width('100%')

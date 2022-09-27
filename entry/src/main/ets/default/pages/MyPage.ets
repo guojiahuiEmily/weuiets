@@ -6,6 +6,9 @@ export struct MyInfo {
 
   build() {
     Column() {
+
+      Text('展示harmonyos ets组件的效果。欢迎大家在github weuiets更新本代码')
+        .fontSize(15).padding(40)
       Row(){
         Image($rawfile('nav/icon-user.png'))
           .margin({left:20})
@@ -15,17 +18,17 @@ export struct MyInfo {
           .renderMode(ImageRenderMode.Original)
           .margin({left:40,right:40})
         Column(){
-          Text('John Doe')
+          Text('by MyIE')
             .fontSize(15)
-          Text('Member Name : John Doe                     >')
+          Text('Member Name : myie')
         }
         .height(60)
         .margin({left:40,top:10})
         .alignItems(HorizontalAlign.Start)
       }
-      TopList()
-      MyTransList()
-      MoreGrid()
+//      TopList()
+//      MyTransList()
+//      MoreGrid()
 
     }
     .alignItems(HorizontalAlign.Start)
