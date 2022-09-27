@@ -112,33 +112,72 @@ struct GoodsList {
 
 @Component
 struct FormArk {
-  private goodsItems: GoodsData[]
 
   build() {
     Column() {
       List({ space: 2, initialIndex: 0 }) {
           ListItem() {
-            Text("按钮").fontSize(17)
+            Button("按钮", { type: ButtonType.Normal, stateEffect: false })
+              .width('100%').height(56).backgroundColor(0xFFFFFF)
+              .fontColor('rgb(0, 0, 0)')
+              .onClick((event: ClickEvent) => {
+                router.push({ uri: 'pages/Button' })
+              })
           }
-          .onClick(() => {
-            router.push({ uri: 'pages/Slider' })
-          })
-          .width('100%').height(56).backgroundColor(0xFFFFFF)
 
         ListItem() {
-          Text("滑杆").fontSize(17)
+          Button("角标", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/BadgeExample' })
+            })
         }
-        .onClick(() => {
-          router.push({ uri: 'pages/Slider' })
-        })
-        .width('100%').height(56).backgroundColor(0xFFFFFF)
 
+        ListItem() {
+          Button("滑杆", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/Slider' })
+            })
+        }
 
-          ListItem() {
-            Text("空白填充").fontSize(17)
-          }
-          .width('100%').height(56).backgroundColor(0xFFFFFF)
+        ListItem() {
+          Button("分隔器", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/DividerExample' })
+            })
+        }
 
+        ListItem() {
+          Button("打分", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/RatingExample' })
+            })
+        }
+
+        ListItem() {
+          Button("弹框", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/PopupExample' })
+            })
+        }
+
+        ListItem() {
+          Button("从下弹框", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/PanelExample' })
+            })
+        }
       }
 
       .height('100%')
@@ -165,7 +204,7 @@ struct GoodsHome {
         TabContent() {
           GoodsList({ goodsItems: this.goodsItems });
         }
-        .tabBar("Recommended")
+        .tabBar("布局")
         .backgroundColor(Color.White)
         TabContent() {
           GoodsList({ goodsItems: this.goodsItems });
