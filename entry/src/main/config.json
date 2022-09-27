@@ -50,6 +50,7 @@
         },
         "pages": [
           "pages/HomePage",
+          "pages/containertab/ColumnExample",
           "pages/Slider",
           "pages/Button",
           "pages/ShoppingCartPage",
@@ -60,7 +61,23 @@
           "pages/RatingExample",
           "pages/PopupExample",
           "pages/PanelExample",
-          "pages/BadgeExample"
+          "pages/BadgeExample",
+          "pages/containertab/ColumnSplit",
+          "pages/CounterExample",
+          "pages/containertab/FlexExample3",
+          "pages/containertab/GridExample",
+          "pages/containertab/ListExample",
+          "pages/containertab/RowExample",
+          "pages/containertab/RowSplitExample",
+          "pages/containertab/ScrollExample",
+          "pages/containertab/StackExample",
+          "pages/giftab/AttrAnimationExample",
+          "pages/giftab/AnimateToExample",
+          "pages/giftab/PageTransitionExample",
+          "pages/giftab/TransitionExample",
+          "pages/giftab/SharedTransitionExampleA",
+          "pages/giftab/SharedTransitionExampleB",
+          "pages/giftab/MotionPathExample"
         ],
         "name": "default",
         "window": {

@@ -110,6 +110,178 @@ struct GoodsList {
 }
 
 
+
+@Component
+struct ContainerTab {
+
+  build() {
+    Column() {
+      List({ space: 2, initialIndex: 0 }) {
+        ListItem() {
+          Button("列容器", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/containertab/ColumnExample' })
+            })
+        }
+
+        ListItem() {
+          Button("列拆分", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/containertab/ColumnSplit' })
+            })
+        }
+
+        ListItem() {
+          Button("Flex布局", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/containertab/FlexExample3' })
+            })
+        }
+
+        ListItem() {
+          Button("网格", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/containertab/GridExample' })
+            })
+        }
+
+        ListItem() {
+          Button("列表", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/containertab/ListExample' })
+            })
+        }
+
+        ListItem() {
+          Button("行容器", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/containertab/RowExample' })
+            })
+        }
+
+        ListItem() {
+          Button("行拆分", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/containertab/RowSplitExample' })
+            })
+        }
+
+        ListItem() {
+          Button("滚动条", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/containertab/ScrollExample' })
+            })
+        }
+
+        ListItem() {
+          Button("堆叠栈", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/containertab/StackExample' })
+            })
+        }
+
+      }
+
+      .height('100%')
+      .width('100%')
+      .align(Alignment.Top)
+      .borderColor(Color.Gray)
+    }
+  }
+}
+
+
+@Component
+struct GifTab {
+
+  build() {
+    Column() {
+      List({ space: 2, initialIndex: 0 }) {
+        ListItem() {
+          Button("属性动画", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/giftab/AttrAnimationExample' })
+            })
+        }
+
+        ListItem() {
+          Button("显式动画", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/giftab/AnimateToExample' })
+            })
+        }
+
+        ListItem() {
+          Button("页面转场", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/giftab/PageTransitionExample' })
+            })
+        }
+
+        ListItem() {
+          Button("组件转场", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/giftab/TransitionExample' })
+            })
+        }
+
+        ListItem() {
+          Button("共享元素转场", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/giftab/SharedTransitionExampleA' })
+            })
+        }
+
+        ListItem() {
+          Button("路径动画", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/giftab/MotionPathExample' })
+            })
+        }
+
+
+      }
+
+      .height('100%')
+      .width('100%')
+      .align(Alignment.Top)
+      .borderColor(Color.Gray)
+    }
+  }
+}
+
+
+
 @Component
 struct FormArk {
 
@@ -178,6 +350,17 @@ struct FormArk {
               router.push({ uri: 'pages/PanelExample' })
             })
         }
+
+        ListItem() {
+          Button("增减数", { type: ButtonType.Normal, stateEffect: false })
+            .width('100%').height(56).backgroundColor(0xFFFFFF)
+            .fontColor('rgb(0, 0, 0)')
+            .onClick((event: ClickEvent) => {
+              router.push({ uri: 'pages/CounterExample' })
+            })
+        }
+
+
       }
 
       .height('100%')
@@ -202,20 +385,24 @@ struct GoodsHome {
         .tabBar('表单')
 
         TabContent() {
-          GoodsList({ goodsItems: this.goodsItems });
+          ContainerTab();
         }
         .tabBar("布局")
-        .backgroundColor(Color.White)
+
         TabContent() {
-          GoodsList({ goodsItems: this.goodsItems });
+          GifTab();
         }
-        .tabBar("Lifestyle")
-        .backgroundColor(Color.White)
+        .tabBar("动画")
+
         TabContent() {
-          GoodsList({ goodsItems: this.goodsItems });
+          ContainerTab();
         }
-        .tabBar("Deals")
-        .backgroundColor(Color.White)
+        .tabBar("多媒体")
+
+        TabContent() {
+          ContainerTab();
+        }
+        .tabBar("手势")
       }
       .barWidth(500)
       .barHeight(45)
